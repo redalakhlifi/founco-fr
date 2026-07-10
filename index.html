@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reset — Membres fondateurs</title>
+<style>
+  :root{
+    --bg:#fbf7f2; --card:#ffffff; --ink:#1a1d1a; --muted:#565c52; --accent:#186340;
+    --accent-soft:#e6f2ea; --accent-ink:#0f3d29; --peach:#ff7a59; --line:#ece6dd;
+    --shadow:0 1px 2px rgba(20,30,20,.04),0 12px 40px -12px rgba(20,40,30,.14);
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:"Inter",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.65;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
+  a{color:inherit}
+  nav{position:sticky;top:0;z-index:50;background:rgba(251,247,242,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  .nav-in{display:flex;align-items:center;gap:14px;height:66px}
+  .brand{font-weight:800;font-size:21px;letter-spacing:-.02em}
+  .brand b{color:var(--accent)}
+  .nav-links{margin-left:auto;display:flex;gap:26px;align-items:center;font-size:15px;color:var(--muted)}
+  .nav-links a{text-decoration:none}
+  .nav-links a:hover{color:var(--ink)}
+  .btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;text-decoration:none;border-radius:12px;transition:.16s ease;cursor:pointer;border:none}
+  .btn-primary{background:var(--accent);color:#fff;padding:12px 22px;font-size:15px;box-shadow:0 8px 20px -8px rgba(31,122,82,.6)}
+  .btn-primary:hover{background:#124c31;transform:translateY(-1px)}
+  .btn-lg{padding:16px 30px;font-size:17px}
+  @media(max-width:720px){.nav-links a:not(.btn){display:none}}
+  .hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:center;padding:64px 0 40px}
+  @media(max-width:860px){.hero{grid-template-columns:1fr;gap:34px;padding:44px 0 20px}}
+  .pill{display:inline-flex;align-items:center;gap:8px;background:var(--accent-soft);color:var(--accent-ink);font-weight:600;font-size:13px;padding:7px 14px;border-radius:999px}
+  .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(31,122,82,.15)}
+  h1{font-size:clamp(34px,5.4vw,54px);line-height:1.05;letter-spacing:-.035em;font-weight:800;margin:20px 0 18px}
+  h1 .hl{color:var(--accent);white-space:nowrap;background:linear-gradient(180deg,transparent 62%,rgba(24,99,64,.16) 62%)}
+  .lead{font-size:clamp(17px,2.2vw,20px);color:var(--muted);max-width:520px}
+  .cta-row{display:flex;align-items:center;gap:18px;margin-top:30px;flex-wrap:wrap}
+  .cta-sub{font-size:13.5px;color:var(--muted)}
+  .cta-sub b{color:var(--ink)}
+  .signup{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:30px;box-shadow:var(--shadow)}
+  .signup h3{font-size:19px;letter-spacing:-.01em;margin-bottom:4px}
+  .signup p.small{color:var(--muted);font-size:14px;margin-bottom:18px}
+  .signup .btn-primary{width:100%;justify-content:center;margin-top:6px}
+  .trust{display:flex;align-items:center;gap:9px;margin-top:14px;font-size:12.5px;color:var(--muted)}
+  .avatars{display:flex}
+  .avatars span{width:26px;height:26px;border-radius:50%;border:2px solid #fff;margin-left:-8px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:700;color:var(--accent-ink)}
+  .avatars span:first-child{margin-left:0}
+  .avatars span:nth-child(2){background:#fde8dc}
+  .avatars span:nth-child(3){background:#e2eef9}
+  .avatars span:nth-child(4){background:#f1e7fb}
+  .strip{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin:26px 0 12px}
+  @media(max-width:720px){.strip{grid-template-columns:1fr}}
+  .perk{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px}
+  .perk .ic{width:42px;height:42px;border-radius:11px;background:var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:21px}
+  .perk h4{font-size:16px;margin:14px 0 5px;letter-spacing:-.01em}
+  .perk p{color:var(--muted);font-size:14px}
+  section.block{padding:60px 0}
+  .kicker{color:var(--accent);font-weight:700;font-size:13px;letter-spacing:.14em;text-transform:uppercase;text-align:center}
+  h2{font-size:clamp(26px,3.6vw,36px);letter-spacing:-.025em;text-align:center;margin:10px 0 8px;font-weight:800}
+  .sub-c{text-align:center;color:var(--muted);max-width:560px;margin:0 auto 40px;font-size:17px}
+  .steps{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  @media(max-width:720px){.steps{grid-template-columns:1fr}}
+  .step .n{width:38px;height:38px;border-radius:11px;background:var(--ink);color:#fff;font-weight:800;display:flex;align-items:center;justify-content:center;font-size:16px}
+  .step h4{margin:15px 0 6px;font-size:18px;letter-spacing:-.01em}
+  .step p{color:var(--muted);font-size:15px}
+  .quote-band{background:var(--accent-ink);color:#eafaf0;border-radius:24px;padding:48px 40px;text-align:center;margin:12px 0}
+  .quote-band p{font-size:clamp(20px,2.8vw,27px);line-height:1.4;letter-spacing:-.015em;font-weight:600;max-width:780px;margin:0 auto}
+  .quote-band .attr{margin-top:18px;font-size:14px;color:#9fd8ba;font-weight:500}
+  .faq{max-width:720px;margin:0 auto}
+  details{border-bottom:1px solid var(--line);padding:18px 4px}
+  summary{cursor:pointer;font-weight:700;font-size:17px;list-style:none;display:flex;justify-content:space-between;align-items:center;letter-spacing:-.01em}
+  summary::-webkit-details-marker{display:none}
+  summary .plus{color:var(--accent);font-size:22px;transition:.2s}
+  details[open] summary .plus{transform:rotate(45deg)}
+  details p{color:var(--muted);font-size:15px;margin-top:10px}
+  .final{background:var(--card);border:1px solid var(--line);border-radius:24px;padding:52px 32px;text-align:center;box-shadow:var(--shadow)}
+  .final h2{margin-bottom:10px}
+  .final p{color:var(--muted);margin-bottom:26px;font-size:17px}
+  footer{padding:40px 0;text-align:center;color:var(--muted);font-size:13.5px;border-top:1px solid var(--line);margin-top:50px}
+  a:focus-visible,button:focus-visible,summary:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:8px}
+  @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<nav aria-label="Principale">
+  <div class="wrap nav-in">
+    <div class="brand">Reset<b>.</b></div>
+    <div class="nav-links">
+      <a href="#how">Comment ça marche</a>
+      <a href="#faq">FAQ</a>
+      <a href="https://forms.gle/bcL7EWgNjtQG2neR7" target="_blank" rel="noopener" class="btn btn-primary">Rejoindre</a>
+    </div>
+  </div>
+</nav>
+<main>
+<div class="wrap">
+  <div class="hero">
+    <div>
+      <span class="pill"><span class="dot"></span> Recrutement de 30 membres fondateurs</span>
+      <h1>Perds du poids — <span class="hl">sans jouer aux devinettes.</span></h1>
+      <p class="lead">On construit un programme minceur pensé autour de vraies personnes, pas de régimes à la mode. Aide-nous à le façonner, et accèdes-y gratuitement avant tout le monde.</p>
+      <div class="cta-row">
+        <a href="https://forms.gle/bcL7EWgNjtQG2neR7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Devenir membre fondateur →</a>
+        <span class="cta-sub"><b>Guide offert</b> + accès fondateur · 2 min</span>
+      </div>
+    </div>
+    <div class="signup" id="join">
+      <h3>Réserve ta place de fondateur</h3>
+      <p class="small">Gratuit à vie pour les premiers membres. Zéro spam. 30 secondes.</p>
+      <ul style="list-style:none;margin:0 0 18px;padding:0">
+        <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink);margin-bottom:9px"><span style="color:var(--accent);font-weight:800">✓</span> Le guide offert : « Pourquoi tu manges comme tu manges »</li>
+        <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink);margin-bottom:9px"><span style="color:var(--accent);font-weight:800">✓</span> Un appel bilan personnalisé de 20 min, offert (optionnel)</li>
+        <li style="display:flex;gap:10px;align-items:flex-start;font-size:14.5px;color:var(--ink)"><span style="color:var(--accent);font-weight:800">✓</span> Accès fondateur &amp; réduction à vie au lancement</li>
+      </ul>
+      <a href="https://forms.gle/bcL7EWgNjtQG2neR7" target="_blank" rel="noopener" class="btn btn-primary" style="width:100%;justify-content:center;">Rejoindre le groupe fondateur →</a>
+      <div class="trust">
+        <div class="avatars" aria-hidden="true"><span>SR</span><span>ML</span><span>JD</span><span>AK</span></div>
+        <span>Rejoins d'autres personnes qui façonnent déjà le programme</span>
+      </div>
+    </div>
+  </div>
+  <div class="strip">
+    <div class="perk"><div class="ic" aria-hidden="true">📖</div><h4>Guide comportemental offert</h4><p>« Pourquoi tu manges comme tu manges » — le lien caché entre stress, sommeil, humeur et ton poids.</p></div>
+    <div class="perk"><div class="ic" aria-hidden="true">🎯</div><h4>Appel bilan offert</h4><p>Une session personnalisée de 20 minutes. Zéro blabla commercial, que du concret.</p></div>
+    <div class="perk"><div class="ic" aria-hidden="true">⭐</div><h4>Accès fondateur</h4><p>Accès anticipé gratuit et réduction fondateur à vie au lancement.</p></div>
+  </div>
+</div>
+<section class="block" id="how">
+  <div class="wrap">
+    <div class="kicker">Comment ça marche</div>
+    <h2>Trois étapes, et tu es dans la place</h2>
+    <p class="sub-c">On ne vend rien pour l'instant. On construit — et on veut le construire autour de toi.</p>
+    <div class="steps">
+      <div class="step"><div class="n">1</div><h4>Laisse tes coordonnées</h4><p>Clique sur « Rejoindre », entre ton prénom et ton e-mail, et tu reçois aussitôt le guide offert, « Pourquoi tu manges comme tu manges ».</p></div>
+      <div class="step"><div class="n">2</div><h4>Partage ton histoire</h4><p>Dis-nous ce qui a marché et ce qui n'a pas marché — un court formulaire, ou un appel détendu si tu veux.</p></div>
+      <div class="step"><div class="n">3</div><h4>Passe en premier</h4><p>Les membres fondateurs ont un accès anticipé gratuit et décident de ce qu'on construit.</p></div>
+    </div>
+  </div>
+</section>
+<div class="wrap">
+  <div class="quote-band">
+    <p>« Le plus dur n'a jamais été de <em>savoir</em> quoi faire. C'est de le faire, semaine après semaine, quand la vie s'en mêle. »</p>
+    <div class="attr">— La raison pour laquelle on construit Reset différemment</div>
+  </div>
+</div>
+<section class="block" id="faq">
+  <div class="wrap">
+    <div class="kicker">Questions</div>
+    <h2>Bon à savoir</h2>
+    <div class="faq" style="margin-top:34px">
+      <details open><summary>C'est vraiment gratuit ? <span class="plus" aria-hidden="true">+</span></summary><p>Oui. Les membres fondateurs ne paient rien — tu obtiens le guide et l'accès anticipé gratuitement, en échange de ton aide pour façonner le produit.</p></details>
+      <details><summary>C'est quoi l'appel bilan ? <span class="plus" aria-hidden="true">+</span></summary><p>Un échange de 20 minutes où on t'aide à définir tes prochaines étapes et où on apprend de ton expérience. Aucun argumentaire de vente.</p></details>
+      <details><summary>Ça marche avec les médicaments minceur ? <span class="plus" aria-hidden="true">+</span></summary><p>Absolument — si tu prends (ou envisages) des GLP-1 comme Ozempic ou Wegovy, ton retour nous intéresse tout particulièrement pour concevoir le programme autour.</p></details>
+      <details><summary>Vous allez me spammer ? <span class="plus" aria-hidden="true">+</span></summary><p>Jamais. Tu recevras uniquement les nouvelles réservées aux membres fondateurs, et tu peux partir quand tu veux.</p></details>
+    </div>
+  </div>
+</section>
+<section class="block">
+  <div class="wrap">
+    <div class="final">
+      <div class="kicker">Les places de fondateur sont limitées</div>
+      <h2>Prêt à nous aider à le construire ?</h2>
+      <p>Rejoins le groupe fondateur. C'est gratuit, et ça prend deux minutes.</p>
+      <a href="https://forms.gle/bcL7EWgNjtQG2neR7" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Compte sur moi →</a>
+    </div>
+  </div>
+</section>
+</main>
+<footer>
+  <div class="wrap">© <span id="yr">2026</span> Reset. Construit avec de vraies personnes, pour de vraies personnes.</div>
+</footer>
+</body>
+</html>
